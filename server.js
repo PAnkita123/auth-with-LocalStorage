@@ -10,7 +10,7 @@ function register(event){
     console.log(dataFromLS, "dataFromLS")
     var flag=false;
     for (var i=0;i<dataFromLS.length;i++){
-        if(dataFromLS[i].email===userEmail){
+        if(dataFromLS[i].Email===userEmail){
             flag=true;
         } 
     }
@@ -22,6 +22,7 @@ function register(event){
         alert('Password must be more than 8 digit!')
     }else{dataFromLS.push(userData);
         localStorage.setItem('userData',JSON.stringify(dataFromLS));
+        // input fields ko empty kiya
         document.getElementById("userName").value='';
         document.getElementById("userEmail").value='';
         document.getElementById("userPassword").value='';
