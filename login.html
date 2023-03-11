@@ -9,17 +9,27 @@
 </head>
 
 <body>
-        <h1>Register</h1>
-        <form onsubmit="register(event)">
-        <label>Name</label><br/> 
-        <input id="userName"type="text"><br/>
-        <label>Email</label><br/> 
-        <input id="userEmail"type="Email"><br/>
-        <label>password</label><br/> 
-        <input id="userPassword"type="password"><br/>
-        <input type="submit" value="Register"/>
-        </form>
-        <script src="./server.js"></script>
+    <h2>Login</h2>
+    <form onsubmit="login(event)">
+        <label>Email</label><br />
+        <input id="email" type="text" /><br />
+        <label>Password</label><br />
+        <input id="password" type="password" /><br />
+        <input type="submit"><br/><a href="./forget-pas.html">Forgot Password?</a>
+
+    </form>
+    <button onclick="window.location.href='register.html'">Register</button>
+    <script src="./server.js"></script>
+    <script>
+        window.onload=function(){
+            var dataFromLS=JSON.parse(localStorage.getItem("currentUser"));
+            if(dataFromLS){
+                window.location.href="./home.html"
+                alert("Already Logged!")
+            }
+        }
+    </script>
+
 
 </body>
 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        #screen {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        #screen>div {
+            width: 18%;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        #screen>div>img {
+            width: 100%;
+            height: 50%;
+        }
+        
+        #screen>div>h1 {
+            font-size: 12px;
+        }
+        
+        #screen>div>p {
+            font-size: 8px;
+        }
+        #screen-2{
+            width: 100%;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="screen-2">
+        <div>Header</div>
+        <div id="screen">
+    
+        </div>
+
+        <div>footer</div>
+    </div>
+
+    <script src='./showproducts.js'></script>
+    
+</body>
+
+</html>
