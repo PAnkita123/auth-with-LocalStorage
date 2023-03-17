@@ -14,6 +14,7 @@
     <div id="cartProducts">
 
     </div>
+    <button onclick="buyProducts()">Buy Product</button>
     <script>
         window.onload=function(){
             var dataFromLS=JSON.parse(localStorage.getItem("currentUser"));
@@ -67,9 +68,9 @@
 
         }
         console.log(updatedUser,"updatedUser")
-        localStorage.setItem("userData",JSON.stringify(updatedUser));
-        window.location.href="/home.html"
+        localStorage.setItem("userData",JSON.stringify(updatedUser));       
         alert("Products will deliver soon.")
+        window.location.href="/home.html"
     }
     </script>
 
